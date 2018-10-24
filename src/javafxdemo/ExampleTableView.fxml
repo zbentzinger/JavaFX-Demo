@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxdemo.ExampleTableViewController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" stylesheets="@layout1.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxdemo.ExampleTableViewController">
    <children>
       <Button layoutX="623.0" layoutY="559.0" mnemonicParsing="false" onAction="#changeSceneButtonPushed" text="Go Back to GUI Objects" />
       <VBox prefHeight="300.0" prefWidth="607.0" spacing="10.0">

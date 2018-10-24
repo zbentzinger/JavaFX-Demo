@@ -180,13 +180,24 @@ public class FXMLDocumentController implements Initializable {
         choiceBoxLabel.setText("");
         choiceBox.getItems().add("Apples");
         choiceBox.getItems().add("Bananas");
-        choiceBox.getItems().addAll("Oranges", "Pears", "Strawberries");
+
+        choiceBox.getItems().addAll(
+                "Oranges",
+                "Pears",
+                "Strawberries"
+        );
+
         choiceBox.setValue("Apples");
 
         //ComboBox Items
         comboBoxLabel.setText("");
-        comboBox.getItems().add("COMP1030");
-        comboBox.getItems().addAll("COMP1008", "MGMT2003", "MGMT2010");
+
+        comboBox.getItems().addAll(
+                "C192",
+                "C193",
+                "C484",
+                "C195"
+        );
 
         //RadioButton Items
         radioButtonLabel.setText("");
@@ -197,7 +208,15 @@ public class FXMLDocumentController implements Initializable {
         this.phpRadioButton.setToggleGroup(favLangToggleGroup);
 
         //ListView Items
-        listView.getItems().addAll("Golf Balls", "Wedges", "Irons", "Tees", "Driver", "Putter");
+        listView.getItems().addAll(
+                "Golf Balls",
+                "Wedges",
+                "Irons",
+                "Tees",
+                "Driver",
+                "Putter"
+        );
+
         listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
     }
