@@ -127,6 +127,26 @@ public class ExampleTableViewController implements Initializable {
 
     }
 
+
+    // Exchange data between scenes
+    public void changeSceneToDetailPerson(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("PersonView.fxml"));
+        Parent tableViewParent = loader.load();
+
+        Scene tableViewScene = new Scene(tableViewParent);
+
+        PersonViewController controller = loader.getController();
+        controller.initData(tableView.getSelectionModel().getSelectedItem());
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+        window.setScene(tableViewScene);
+        window.show();
+
+    }
+
     // Main Controller Execution
     @Override
     public void initialize(URL url, ResourceBundle rb) {

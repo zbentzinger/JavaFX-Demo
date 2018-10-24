@@ -1,6 +1,7 @@
 package javafxdemo;
 
 import java.time.LocalDate;
+import java.time.Period;
 import javafx.beans.property.SimpleStringProperty;
 
 /**
@@ -17,6 +18,12 @@ public class Person {
         this.firstName = new SimpleStringProperty(firstName);
         this.lastName = new SimpleStringProperty(lastName);
         this.birthday = birthday;
+
+    }
+
+    public int getAge() {
+
+        return Period.between(this.birthday, LocalDate.now()).getYears();
 
     }
 
