@@ -18,7 +18,7 @@
                   <Font name="Verdana" size="18.0" />
                </font>
             </Label>
-            <TableView fx:id="tableView" prefHeight="200.0" prefWidth="600.0">
+            <TableView fx:id="tableView" onMouseClicked="#enableDetailedPersonViewButton" prefHeight="200.0" prefWidth="600.0">
               <columns>
                 <TableColumn fx:id="firstNameColumn" onEditCommit="#changeFirstNameCellEvent" prefWidth="200.0" text="First Name" />
                 <TableColumn fx:id="lastNameColumn" onEditCommit="#changeLastNameCellEvent" prefWidth="200.0" text="Last Name" />
@@ -45,7 +45,7 @@
                <children>
                   <Button mnemonicParsing="false" onAction="#newPersonButtonPushed" prefHeight="30.0" prefWidth="180.0" text="Add New Person" />
                   <Button mnemonicParsing="false" onAction="#deletePersonsButtonPushed" prefHeight="30.0" prefWidth="180.0" text="Delete Person(s)" />
-                  <Button mnemonicParsing="false" onAction="#changeSceneToDetailPerson" prefHeight="30.0" prefWidth="180.0" text="Detailed Person View" />
+                  <Button fx:id="detailedPersonViewButton" mnemonicParsing="false" onAction="#changeSceneToDetailPerson" prefHeight="30.0" prefWidth="180.0" text="Detailed Person View" />
                </children>
                <padding>
                   <Insets bottom="10.0" />

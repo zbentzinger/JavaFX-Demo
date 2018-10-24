@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
@@ -22,6 +23,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -61,9 +63,33 @@ public class ExampleTableViewController implements Initializable {
     public ObservableList<Person> getPeople() {
 
         ObservableList<Person> people = FXCollections.observableArrayList();
-        people.add(new Person("Frank", "Sinatra", LocalDate.of(1926, Month.DECEMBER, 12)));
-        people.add(new Person("Rebecca", "Fergusson", LocalDate.of(1986, Month.JULY, 21)));
-        people.add(new Person("Mr.", "T", LocalDate.of(1952, Month.MAY, 21)));
+
+        people.add(
+                new Person(
+                        "Frank",
+                        "Sinatra",
+                        LocalDate.of(1926, Month.DECEMBER, 12),
+                        new Image("images/frank_sinatra.jpg")
+                )
+        );
+
+        people.add(
+                new Person(
+                        "Evangeline",
+                        "Lilly",
+                        LocalDate.of(1979, Month.AUGUST, 3),
+                        new Image("images/evangeline_lilly.jpg")
+                )
+        );
+
+        people.add(
+                new Person(
+                        "Mark",
+                        "Ruffalo",
+                        LocalDate.of(1967, Month.NOVEMBER, 22),
+                        new Image("images/mark_ruffalo.jpg")
+                )
+        );
 
         return people;
 
@@ -147,6 +173,18 @@ public class ExampleTableViewController implements Initializable {
 
     }
 
+
+    //Handles disabling details button until person is selected
+    @FXML
+    private Button detailedPersonViewButton;
+
+    public void enableDetailedPersonViewButton() {
+
+        this.detailedPersonViewButton.setDisable(false);
+
+    }
+
+
     // Main Controller Execution
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -166,6 +204,9 @@ public class ExampleTableViewController implements Initializable {
 
         // Allow Table to select multiple rows at once.
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
+        // Disable detailedPersonViewButton until a person is selected.
+        this.detailedPersonViewButton.setDisable(true);
 
     }
 

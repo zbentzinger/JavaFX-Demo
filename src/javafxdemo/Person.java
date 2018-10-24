@@ -3,6 +3,7 @@ package javafxdemo;
 import java.time.LocalDate;
 import java.time.Period;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.image.Image;
 
 /**
  *
@@ -12,18 +13,41 @@ public class Person {
 
     private SimpleStringProperty firstName, lastName;
     private LocalDate birthday;
+    private Image photo;
 
     public Person(String firstName, String lastName, LocalDate birthday) {
 
         this.firstName = new SimpleStringProperty(firstName);
         this.lastName = new SimpleStringProperty(lastName);
         this.birthday = birthday;
+        photo = new Image("images/defaultimage.jpg");
+
+    }
+
+    public Person(String firstName, String lastName, LocalDate birthday, Image photo) {
+
+        this.firstName = new SimpleStringProperty(firstName);
+        this.lastName = new SimpleStringProperty(lastName);
+        this.birthday = birthday;
+        this.photo = photo;
 
     }
 
     public int getAge() {
 
         return Period.between(this.birthday, LocalDate.now()).getYears();
+
+    }
+
+    public Image getImage() {
+
+        return photo;
+
+    }
+
+    public void setImage(Image newPhoto) {
+
+        this.photo = newPhoto;
 
     }
 

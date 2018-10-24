@@ -11,6 +11,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 /**
@@ -35,6 +36,9 @@ public class PersonViewController implements Initializable {
     @FXML
     private Label ageLabel;
 
+    @FXML
+    private ImageView photo;
+
     public void initData(Person person) {
 
         selectedPerson = person;
@@ -43,6 +47,7 @@ public class PersonViewController implements Initializable {
         lastNameLabel.setText(selectedPerson.getLastName());
         birthdayLabel.setText(selectedPerson.getBirthday().toString());
         ageLabel.setText(Integer.toString(selectedPerson.getAge()));
+        photo.setImage(selectedPerson.getImage());
 
     }
 
