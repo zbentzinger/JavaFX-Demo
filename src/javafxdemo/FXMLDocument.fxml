@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxdemo.FXMLDocumentController">
+   <children>
+      <HBox prefHeight="300.0" prefWidth="800.0">
+         <children>
+            <VBox prefHeight="300.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="Checkbox Object">
+                     <font>
+                        <Font name="Verdana" size="18.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="pepperoniCheckBox" mnemonicParsing="false" text="Pepperoni" />
+                  <CheckBox fx:id="pineappleCheckBox" mnemonicParsing="false" text="Pineapple" />
+                  <CheckBox fx:id="baconCheckBox" mnemonicParsing="false" text="Bacon" />
+                  <Button mnemonicParsing="false" onAction="#pizzaOrderButtonPushed" text="Order Pizza" />
+                  <Label fx:id="pizzaOrderLabel" alignment="TOP_LEFT" prefHeight="300.0" prefWidth="200.0" text="Label" />
+               </children>
+            </VBox>
+            <VBox prefHeight="300.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="ChoiceBox Object">
+                     <font>
+                        <Font name="Verdana" size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="choiceBox" prefWidth="150.0" />
+                  <Button mnemonicParsing="false" onAction="#choiceBoxButtonPushed" text="Favorite Fruit" />
+                  <Label fx:id="choiceBoxLabel" text="Label" />
+               </children>
+            </VBox>
+            <VBox prefHeight="300.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="ComboBox Object">
+                     <font>
+                        <Font name="Verdana" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comboBox" onAction="#comboBoxWasUpdated" prefWidth="150.0" />
+                  <Label fx:id="comboBoxLabel" text="Label" />
+               </children>
+            </VBox>
+            <VBox prefHeight="300.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="RadioButton Object">
+                     <font>
+                        <Font name="Verdana" size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="phpRadioButton" mnemonicParsing="false" onAction="#radioButtonWasSelected" text="PHP" />
+                  <RadioButton fx:id="javaRadioButton" mnemonicParsing="false" onAction="#radioButtonWasSelected" text="Java" />
+                  <RadioButton fx:id="cSharpRadioButton" mnemonicParsing="false" onAction="#radioButtonWasSelected" text="C#" />
+                  <RadioButton fx:id="cPlusPlusRadioButton" mnemonicParsing="false" onAction="#radioButtonWasSelected" text="C++" />
+                  <Label fx:id="radioButtonLabel" text="Label" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox layoutY="295.0" prefHeight="300.0" prefWidth="800.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label text="ListView Object">
+                     <font>
+                        <Font name="Verdana" size="18.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="listView" prefHeight="300.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+            <StackPane prefHeight="300.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#listViewButtonPushed" text="Selected Gear -&gt;" />
+               </children>
+            </StackPane>
+            <VBox prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label text="TextArea Object">
+                     <font>
+                        <Font name="Verdana" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="golfTextArea" prefHeight="300.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+            <AnchorPane prefHeight="300.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="118.0" layoutY="253.0" mnemonicParsing="false" onAction="#changeSceneButtonPushed" text="Go to Table View" />
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

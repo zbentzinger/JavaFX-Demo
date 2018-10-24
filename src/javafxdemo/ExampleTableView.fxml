@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxdemo.ExampleTableViewController">
+   <children>
+      <Button layoutX="623.0" layoutY="559.0" mnemonicParsing="false" onAction="#changeSceneButtonPushed" text="Go Back to GUI Objects" />
+      <VBox prefHeight="300.0" prefWidth="607.0" spacing="10.0">
+         <children>
+            <Label text="TableView Object">
+               <font>
+                  <Font name="Verdana" size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableView" prefHeight="200.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="firstNameColumn" onEditCommit="#changeFirstNameCellEvent" prefWidth="200.0" text="First Name" />
+                <TableColumn fx:id="lastNameColumn" onEditCommit="#changeLastNameCellEvent" prefWidth="200.0" text="Last Name" />
+                  <TableColumn fx:id="birthDateColumn" prefWidth="200.0" text="Birthdate" />
+              </columns>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TableView>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+               <children>
+                  <TextField fx:id="firstNameTextField" prefHeight="30.0" prefWidth="180.0" promptText="First Name" />
+                  <TextField fx:id="lastNameTextField" prefHeight="30.0" prefWidth="180.0" promptText="Last Name" />
+                  <DatePicker fx:id="birthdayDatePicker" prefHeight="30.0" prefWidth="180.0" promptText="Birthday" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#newPersonButtonPushed" prefHeight="30.0" prefWidth="180.0" text="Add New Person" />
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="180.0" text="Delete Peron(s)" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
