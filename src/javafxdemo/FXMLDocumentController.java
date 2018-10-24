@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package javafxdemo;
 
 import java.io.IOException;
@@ -33,9 +28,7 @@ import javafx.stage.Stage;
  */
 public class FXMLDocumentController implements Initializable {
 
-
     //CheckBox Items
-
     @FXML
     private Label pizzaOrderLabel;
 
@@ -70,7 +63,6 @@ public class FXMLDocumentController implements Initializable {
 
 
     // ChoiceBox Items
-
     @FXML
     private ChoiceBox choiceBox;
 
@@ -78,12 +70,14 @@ public class FXMLDocumentController implements Initializable {
     private Label choiceBoxLabel;
 
     public void choiceBoxButtonPushed() {
-        choiceBoxLabel.setText("My favorite fruit is:\n\n" + choiceBox.getValue().toString());
+
+        String temp = "My favorite fruit is:\n\n";
+        choiceBoxLabel.setText(temp + choiceBox.getValue().toString());
+
     }
 
 
     // ComboBox Items
-
     @FXML
     private ComboBox comboBox;
 
@@ -91,12 +85,14 @@ public class FXMLDocumentController implements Initializable {
     private Label comboBoxLabel;
 
     public void comboBoxWasUpdated() {
-        this.comboBoxLabel.setText("Course selected:\n\n" + comboBox.getValue().toString());
+
+        String temp = "Course selected:\n\n";
+        this.comboBoxLabel.setText(temp + comboBox.getValue().toString());
+
     }
 
 
     // RadioButton Items
-
     @FXML
     private RadioButton phpRadioButton;
 
@@ -133,6 +129,7 @@ public class FXMLDocumentController implements Initializable {
         if (this.favLangToggleGroup.getSelectedToggle().equals(this.phpRadioButton)) {
             this.radioButtonLabel.setText(lang + "PHP");
         }
+
     }
 
 
@@ -154,11 +151,11 @@ public class FXMLDocumentController implements Initializable {
         }
 
         this.golfTextArea.setText(textAreaString);
+
     }
 
 
     // Handles change of scene
-
     public void changeSceneButtonPushed(ActionEvent event) throws IOException {
 
         Parent tableViewParent = FXMLLoader.load(getClass().getResource("ExampleTableView.fxml"));
@@ -168,7 +165,9 @@ public class FXMLDocumentController implements Initializable {
 
         window.setScene(tableViewScene);
         window.show();
+
     }
+
 
     // Main Initialization method
     @Override
@@ -200,5 +199,7 @@ public class FXMLDocumentController implements Initializable {
         //ListView Items
         listView.getItems().addAll("Golf Balls", "Wedges", "Irons", "Tees", "Driver", "Putter");
         listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
     }
+
 }

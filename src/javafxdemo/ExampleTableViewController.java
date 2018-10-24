@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package javafxdemo;
 
 import java.io.IOException;
@@ -112,13 +107,23 @@ public class ExampleTableViewController implements Initializable {
         );
 
         tableView.getItems().add(newPerson);
+
     }
 
 
     // Delete person from TableView
     public void deletePersonsButtonPushed() {
 
+        ObservableList<Person> selectedRows, allPeople;
+        allPeople = tableView.getItems();
 
+        selectedRows = tableView.getSelectionModel().getSelectedItems();
+
+        for (Person person: selectedRows) {
+
+            allPeople.remove(person);
+
+        }
 
     }
 
@@ -141,6 +146,7 @@ public class ExampleTableViewController implements Initializable {
 
         // Allow Table to select multiple rows at once.
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
     }
 
 }
