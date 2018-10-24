@@ -1,3 +1,8 @@
+/**
+ * Code loosely follows the YouTube playlist by Jaret Wright.
+ * Playlist: https://www.youtube.com/playlist?list=PLoodc-fmtJNYbs-gYCdd5MYS4CKVbGHv2
+ * His GitHub: https://github.com/JaretWright
+ */
 package javafxdemo;
 
 import javafx.application.Application;

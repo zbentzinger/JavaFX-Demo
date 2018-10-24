@@ -14,7 +14,7 @@
       <Button layoutX="737.0" layoutY="559.0" mnemonicParsing="false" onAction="#backButtonPushed" text="Back" />
       <VBox alignment="CENTER" layoutY="14.0" prefHeight="525.0" prefWidth="800.0" spacing="50.0">
          <children>
-            <Label text="Detailed Person View">
+            <Label text="Person Details">
                <font>
                   <Font name="Verdana" size="25.0" />
                </font>
@@ -73,7 +73,8 @@
                   </Label>
                </children>
             </GridPane>
-            <ImageView fx:id="photo" fitHeight="250.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="photo" fitHeight="200.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
+            <Button mnemonicParsing="false" onAction="#updateImageButton" text="Update Image" />
          </children>
       </VBox>
    </children>
